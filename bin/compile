@@ -97,10 +97,10 @@ fi
 # Install meteor
 #
 echo "$METEOR_DIR"
-if [ ! -e "$METEOR_DIR/.meteor/meteor" ]; then
-  echo "-----> Installing meteor"
-  curl -sS "https://install.meteor.com/?release=$APP_RELEASE" | HOME="$METEOR_DIR" /bin/sh
-fi
+#if [ ! -e "$METEOR_DIR/.meteor/meteor" ]; then
+#  echo "-----> Installing meteor"
+curl -sS "https://install.meteor.com/?release=$APP_RELEASE" | HOME="$METEOR_DIR" /bin/sh
+# fi
 METEOR="$METEOR_DIR/.meteor/meteor" # The meteor binary.
 
 echo "-----> Meteor version: `HOME=$METEOR_DIR $METEOR --version`"
